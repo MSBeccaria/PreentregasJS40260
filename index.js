@@ -37,7 +37,7 @@ console.log(turistas);
 
 
 function buscarTurista(tour, apellido){
-    return tour.find( objeto => objeto.nombre === apellido.tuUpperCase());
+    return tour.find( objeto => objeto.apellido === apellido.toUpperCase());
 }
 for (let index=0; index<3; index ++){
     let busqueda = buscarTurista(turistas,prompt('Ingrese Apellido del turista'));
