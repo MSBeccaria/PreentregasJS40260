@@ -18,7 +18,7 @@ alert(mensaje);*/
 
 /*esto como para recopilar datos de los inscriptos, pero no se si está bien*/
 
-class Turista{
+class Turista {
     constructor(tour, nombre, apellido, mail) {
         this.tour = tour;
         this.nombre = nombre;
@@ -36,8 +36,8 @@ console.log(turistas);
 
 
 
-function buscarTurista(tour, apellido){
-    return tour.find( objeto => objeto.apellido === apellido.toUpperCase());
+function buscarTurista(tour, nombre){
+    return tour.find( objeto => objeto.apellido === nombre.toUpperCase());
 }
 for (let index=0; index<3; index ++){
     let busqueda = buscarTurista(turistas,prompt('Ingrese Apellido del turista'));
