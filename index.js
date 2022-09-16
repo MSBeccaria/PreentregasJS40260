@@ -32,18 +32,22 @@ const turistas = [];
 turistas.push(new Turista("Casco histórico", "Susana", "Lopez", "susana@lopez"));
 turistas.push(new Turista("Patrimonio arquitectura", "Juan", "Perez", "juan@perez"));
 turistas.push(new Turista("Casco histórico", "Ana", "Gomez", "ana@gomez"));
-console.log(turistas);
+console.log(turistas); 
 
 
 
 function buscarTurista(tour, nombre){
-    return tour.find( objeto => objeto.apellido === nombre.toUpperCase());
+    console.log(tour) 
+    console.log(nombre)
+    return tour.find( objeto => objeto.apellido === nombre);
 }
-for (let index=0; index<3; index ++){
-    let busqueda = buscarTurista(turistas,prompt('Ingrese Apellido del turista'));
+
+
+    let busqueda = buscarTurista(turistas,"Gomez");
     if (busqueda != undefined){
-    alert ('Reserva de'+ busqueda.apellido + 'para tour' + busqueda.tour);
+    console.log('Reserva de'+ busqueda.apellido + 'para tour' + busqueda.tour);
 } else{
-    alert ('No hay reserva a ese nombre')
-}
+    
+    console.log("No hay reserva a ese nombre")
+    console.log(busqueda)
 }
